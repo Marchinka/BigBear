@@ -40,7 +40,9 @@ public class LoginServlet extends HttpServlet {
     	UserValidation validation = this.userRepository.isUserValid(user);
     	
     	if (validation.isValid()) {
-    		request.getRequestDispatcher("/big-bear-room/index.jsp").forward(request, response);
+    		request.getSession().setAttribute("username", user.getUsername());
+    		response.sendRedirect("/big-bear-room");
+    		//request.getRequestDispatcher("/big-bear-room/index.jsp").forward(request, response);
     	} else {
     		request.setAttribute("usernameError", validation.getUsernameError());	
     		request.setAttribute("passwordError", validation.getPasswordError());

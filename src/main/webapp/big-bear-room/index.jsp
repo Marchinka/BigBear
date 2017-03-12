@@ -11,9 +11,21 @@
 	<![endif]-->
 </head>
 <body>
-	<h1>Hello Big Bear!ROOM</h1>  
+	<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1>  
 	
+	<div>
+		<ul id="messageList"></ul>
+	</div>
+
+	<div>
+		<ul id="userList"></ul>
+	</div>
 	
-	
+	<form id="messageForm">
+		<input type="text" id="chatInput" />
+		<button type="submit">Send</button>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
