@@ -17,7 +17,6 @@ var sendMessage = function ()  {
 		console.log("error");
 	});
 	$("#chatInput").val("");
-	$('body').click();
 	scrollToBottom();
 };
 
