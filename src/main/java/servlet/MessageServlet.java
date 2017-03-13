@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -32,7 +33,19 @@ public class MessageServlet extends HttpServlet {
 	
 	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-		doPost(request, response);
+		ArrayList<MessageModel> messages = (ArrayList<MessageModel>) request.getServletContext().getAttribute("messages");
+    	
+    	if(messages == null){
+    		messages = new ArrayList<MessageModel>();
+    		request.getServletContext().setAttribute("messages", messages);
+    	}
+    	
+    	Gson gson = new Gson();
+    	String responseJson = gson.toJson(messages);
+    	response.setContentType("application/json");
+    	PrintWriter printWriter = response.getWriter();
+    	printWriter.print(responseJson);
+    	printWriter.flush();    	
 	}
 	
     @Override
@@ -43,19 +56,24 @@ public class MessageServlet extends HttpServlet {
     	System.out.println(messageJson);
 
     	MessageModel messageModel = gson.fromJson(messageJson, MessageModel.class);
+    	String username = request.getSession().getAttribute("username").toString();
+    	messageModel.setUsername(username);
     	
-    	ArrayList<String> messages = (ArrayList<String>) request.getServletContext().getAttribute("messages");
+    	ArrayList<MessageModel> messages = (ArrayList<MessageModel>) request.getServletContext().getAttribute("messages");
     	
     	if(messages == null){
-    		messages = new ArrayList<String>();
+    		messages = new ArrayList<MessageModel>();
     		request.getServletContext().setAttribute("messages", messages);
     	}
     	
-    	String message =  request.getAttribute("username") +": "+ messageModel.getMessage();
-    	messages.add(message);
-    	System.out.println(message);
+    	messages.add(messageModel);
     	System.out.println(messages.size());
     	
+    	String responseJson = gson.toJson(messageModel);
+    	response.setContentType("application/json");
+    	PrintWriter printWriter = response.getWriter();
+    	printWriter.print(responseJson);
+    	printWriter.flush();
     }
     
 }

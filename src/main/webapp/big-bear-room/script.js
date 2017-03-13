@@ -1,4 +1,5 @@
 var sendMessage = function ()  {
+	var messageListView	= new MessageListView("#messageList");
 	var messageModel = {
 		message: $("#chatInput").val()
 	};
@@ -12,6 +13,7 @@ var sendMessage = function ()  {
 	})
 	.done(function(response) {
 		console.log("success");
+		messageListView.addMessage(response);
 	})
 	.fail(function() {
 		console.log("error");
@@ -20,8 +22,53 @@ var sendMessage = function ()  {
 	scrollToBottom();
 };
 
+var getMessages = function () {
+	var messageListView	= new MessageListView("#messageList");
+
+	$.ajax({
+		url: '/Messages',
+		type: 'GET',
+		dataType: 'json',
+		contentType: 'application/json; charset=utf-8'
+	})
+	.done(function(response) {
+		console.log("success");
+		messageListView.renderMessageList(response);
+	})
+	.fail(function() {
+		console.log("error");
+	});
+};
+
 var scrollToBottom = function () {
 	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+};
+
+var MessageListView = function (selector) {
+	var element = $(selector);
+
+	var clearMessages = function() {
+		element.html("");
+	};
+
+	this.addMessage = function(message) {
+		var html = 
+			"<li class='message-card w3-card-4'>" +
+			"	<span class='user-info w3-text-green'>" + message.username + "</span>" +
+			"	<div class='message-content'>" +
+				message.message +
+			"	</div>" +
+			"</li>";
+		element.append(html);
+	};
+
+	this.renderMessageList = function(list) {
+		clearMessages();
+		for (var i = 0; i < list.length; i++) {
+			var message = list[i];
+			this.addMessage(message);
+		};
+	};
 };
 
 var runApplication = function ()  {
@@ -31,6 +78,7 @@ var runApplication = function ()  {
 	});
 	$("#chatInput").focus(scrollToBottom);
 	scrollToBottom();
+	setInterval(getMessages, 3 * 1000);
 };
 
 
