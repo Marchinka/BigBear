@@ -86,7 +86,7 @@ body { font-size: 1em;}
 @media (min-width: 700px) {
     html { 
         color: green;
-        font-size: 100%; 
+        font-size: 400%; 
     }
 }
 
