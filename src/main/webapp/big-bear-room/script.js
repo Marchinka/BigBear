@@ -2,12 +2,13 @@ var sendMessage = function ()  {
 	var messageModel = {
 		message: $("#chatInput").val()
 	};
-	var xml = "<messageModel><message>" + messageModel.message + "</message></messageModel>"
+	var json = JSON.stringify(messageModel);
 	$.ajax({
 		url: '/Messages',
 		type: 'POST',
-		dataType: 'xml',
-		data: messageModel.message
+		dataType: 'json',
+		contentType: 'application/json; charset=utf-8',
+		data: json
 	})
 	.done(function(response) {
 		console.log("success");

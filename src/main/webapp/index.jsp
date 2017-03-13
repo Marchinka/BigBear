@@ -13,7 +13,7 @@
 <body>
 	<h1>Hello Big Bear!</h1>  
 	
-	<form action="Login" method='post'>
+	<form action="Login" method='post' id="loginForm">
 	
 		<div>
 			<label for='username'>Username</label>
@@ -36,8 +36,17 @@
 				%>
 			</span>
 		</div>
+
+		<div>
+			<label for='rememberMe'>
+				Remember Me
+				<input name='rememberMe' id='rememberMe' type='checkbox'/>
+			</label>
+		</div>		
 		<button type='submit'>Log In</button>
 	</form>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

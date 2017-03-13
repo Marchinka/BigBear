@@ -15,6 +15,9 @@ import javax.xml.parsers.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.google.gson.Gson;
+
+import model.*;
 import utils.LoginResources;
 
 @WebServlet(
@@ -35,8 +38,11 @@ public class MessageServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         
-    	
-    	String message = request.getReader().lines().collect(Collectors.joining());
+    	Gson gson = new Gson();
+    	String messageJson = request.getReader().lines().collect(Collectors.joining());
+    	System.out.println(messageJson);
+
+    	MessageModel messageModel = gson.fromJson(messageJson, MessageModel.class);
     	
     	ArrayList<String> messages = (ArrayList<String>) request.getServletContext().getAttribute("messages");
     	
@@ -45,9 +51,10 @@ public class MessageServlet extends HttpServlet {
     		request.getServletContext().setAttribute("messages", messages);
     	}
     	
-    	message = request.getAttribute("username") +": "+ message;
+    	String message =  request.getAttribute("username") +": "+ messageModel.getMessage();
     	messages.add(message);
-    	System.out.print(messages.size());
+    	System.out.println(message);
+    	System.out.println(messages.size());
     	
     }
     

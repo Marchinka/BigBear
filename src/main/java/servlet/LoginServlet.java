@@ -16,7 +16,7 @@ import utils.LoginResources;
 
 @WebServlet(
         name = "LoginServlet", 
-        urlPatterns = {"/Login"}
+        urlPatterns = {"/Login", "/login"}
     )
 public class LoginServlet extends HttpServlet {
 
@@ -26,6 +26,11 @@ public class LoginServlet extends HttpServlet {
 		super();
 		this.userRepository = new DummyUserRepository();
 	}
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	request.getRequestDispatcher("index.jsp").forward(request, response);
+    }
 	
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,9 +45,8 @@ public class LoginServlet extends HttpServlet {
     	UserValidation validation = this.userRepository.isUserValid(user);
     	
     	if (validation.isValid()) {
-    		request.getSession().setAttribute("username", user.getUsername());
+    		request.getSession().setAttribute("username", username);
     		response.sendRedirect("/big-bear-room");
-    		//request.getRequestDispatcher("/big-bear-room/index.jsp").forward(request, response);
     	} else {
     		request.setAttribute("usernameError", validation.getUsernameError());	
     		request.setAttribute("passwordError", validation.getPasswordError());

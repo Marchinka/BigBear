@@ -9,6 +9,8 @@
 	<!--[if lt IE 9]>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
+	
+	<%@ page import="model.*" %>
 </head>
 <body>
 	<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1>  
