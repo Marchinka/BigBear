@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Big Bear</title>
-	<meta name="description" content="The HTML5 Herald">
-	<meta name="author" content="SitePoint">
+	<meta name="description" content="Big Bear">
+	<meta name="author" content="Cps4j">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./../icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./../icons/apple-touch-icon-114x114.png" />
