@@ -53,8 +53,14 @@
 	</div>
 	
 	<form id="messageForm" class="w3-panel w3-teal chat-form" style="margin-bottom: 0px!important;">
-		<input type="text" id="chatInput" class="chat-text"/>
-		<button type="submit" class="w3-button w3-indigo chat-button">Send</button>
+		<div class="w3-row">
+  			<div class="w3-col m10">
+    			<input type="text" id="chatInput" class="chat-text"/>
+  			</div>
+  			<div class="w3-col m2">
+    			<button type="submit" class="w3-button w3-indigo chat-button">Send</button>
+  			</div>
+		</div>
 	</form>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
