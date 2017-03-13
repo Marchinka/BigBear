@@ -17,10 +17,20 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1>  
+	<!--<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1> -->
 	
 	<div>
-		<ul id="messageList"></ul>
+		<ul id="messageList" class="w3-ul w3-card-4">
+			<li class="w3-blue message-card">
+				<p>Message</p>
+			</li>
+			<li class="w3-green message-card">
+				<p>Message</p>
+			</li>
+			<li class="w3-red message-card">
+				<p>Message</p>
+			</li>			
+		</ul>
 	</div>
 
 	<div>

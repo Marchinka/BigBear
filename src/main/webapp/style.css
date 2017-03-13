@@ -56,8 +56,8 @@ span.psw {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (min-width: 1200px) {
     img.avatar {
-        width: 40%;
+        width: 20%;
     }
 }
