@@ -69,30 +69,30 @@ span.psw {
 html { font-size: 62.5%; }
 body { font-size: 1em;}
 
-@media (max-width: 300px) {
+@media (min-width: 300px) {
     html { 
         color: grey;
-        font-size: 600%; 
+        font-size: 400%; 
     }
 }
 
 @media (min-width: 500px) {
     html { 
         color: red;
-        font-size: 500%;
+        font-size: 400%;
     }
 }
 
 @media (min-width: 700px) {
     html { 
         color: green;
-        font-size: 400%;
+        font-size: 100%; 
     }
 }
 
 @media (min-width: 1200px) {
     html { 
         font-size: 100%; 
-        color: red;
+        color: purple;
     }
 }
