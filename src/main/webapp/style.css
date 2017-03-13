@@ -65,34 +65,3 @@ span.psw {
         width: 40%;
     }
 }
-
-html { font-size: 62.5%; }
-body { font-size: 1em;}
-
-@media (min-width: 300px) {
-    html { 
-        color: grey;
-        font-size: 400%; 
-    }
-}
-
-@media (min-width: 500px) {
-    html { 
-        color: red;
-        font-size: 400%;
-    }
-}
-
-@media (min-width: 700px) {
-    html { 
-        color: green;
-        font-size: 400%; 
-    }
-}
-
-@media (min-width: 1200px) {
-    html { 
-        font-size: 100%; 
-        color: purple;
-    }
-}
