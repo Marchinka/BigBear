@@ -30,6 +30,7 @@ var runApplication = function ()  {
 		e.preventDefault();
 		sendMessage();
 	});
+	$("#chatInput").focus(scrollToBottom);
 	scrollToBottom();
 };
 
