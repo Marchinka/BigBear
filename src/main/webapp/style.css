@@ -70,17 +70,29 @@ html { font-size: 62.5%; }
 body { font-size: 1em;}
 
 @media (max-width: 300px) {
-    html { font-size: 70%; }
+    html { 
+        color: grey;
+        font-size: 900%; 
+    }
 }
 
 @media (min-width: 500px) {
-    html { font-size: 80%; }
+    html { 
+        color: red;
+        font-size: 200%;
+    }
 }
 
 @media (min-width: 700px) {
-    html { font-size: 120%; }
+    html { 
+        color: green;
+        font-size: 120%;
+    }
 }
 
 @media (min-width: 1200px) {
-    html { font-size: 200%; }
+    html { 
+        font-size: 200%; 
+        color: red;
+    }
 }
