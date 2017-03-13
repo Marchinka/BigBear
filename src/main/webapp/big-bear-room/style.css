@@ -10,3 +10,20 @@
 .message-content {
 	margin-left: 1%;
 }
+
+.chat-text {
+	width: 88%;
+}
+
+.chat-button {
+	width: 10%;
+	float: right;
+}
+
+.chat-form {
+	position: fixed;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	bottom: 0px;
+}
