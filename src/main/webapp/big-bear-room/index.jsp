@@ -15,6 +15,7 @@
 	<%@ page import="model.*" %>
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<!--<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1> -->
@@ -54,11 +55,13 @@
 	
 	<form id="messageForm" class="w3-panel w3-teal chat-form" style="margin-bottom: 0px!important;">
 		<div class="w3-row">
-  			<div class="w3-col s10">
+  			<div class="w3-col s10 m11">
     			<input type="text" id="chatInput" class="chat-text"/>
   			</div>
-  			<div class="w3-col s2">
-    			<button type="submit" class="w3-button w3-indigo chat-button">Send</button>
+  			<div class="w3-col s2 m1">
+    			<button type="submit" class="w3-button w3-indigo chat-button">
+					<span class="fa fa-arrow-right" aria-hidden="true"></span>
+    			</button>
   			</div>
 		</div>
 	</form>
