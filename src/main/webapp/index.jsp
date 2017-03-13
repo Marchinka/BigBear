@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 	<meta charset="utf-8">
 	<title>Big Bear</title>
 	<meta name="description" content="The HTML5 Herald">
@@ -9,12 +8,17 @@
 	<!--[if lt IE 9]>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Hello Big Bear!</h1>  
-	
-	<form action="Login" method='post' id="loginForm">
-	
+
+<form action="Login" method='post' id="loginForm">
+	<div class="imgcontainer">
+    	<img src="login-bear.jpg" alt="Avatar" class="avatar">
+  	</div>
+
+	<div class="container">
 		<div>
 			<label for='username'>Username</label>
 			<input name='username' id='username' type='text' placeholder='Insert username'/>
@@ -43,10 +47,11 @@
 				<input name='rememberMe' id='rememberMe' type='checkbox'/>
 			</label>
 		</div>		
-		<button type='submit'>Log In</button>
-	</form>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="script.js"></script>
+		<button type='submit' class="w3-button w3-brown">Log In</button>
+	</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
