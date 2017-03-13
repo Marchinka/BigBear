@@ -6,11 +6,15 @@
 	<title>Big Bear</title>
 	<meta name="description" content="The HTML5 Herald">
 	<meta name="author" content="SitePoint">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<!--[if lt IE 9]>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
 	
 	<%@ page import="model.*" %>
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<h1>Hello <%= request.getSession().getAttribute("username") %>, Welcome to Big Bear ROOM!</h1>  
