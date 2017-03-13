@@ -18,7 +18,7 @@
     	<img src="login-bear.jpg" alt="Avatar" class="avatar">
   	</div>
 
-	<div class="container">
+	<div class="w3-container">
 		<div>
 			<label for='username'>Username</label>
 			<input name='username' id='username' type='text' placeholder='Insert username'/>
