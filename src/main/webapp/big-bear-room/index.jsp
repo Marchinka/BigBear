@@ -125,13 +125,13 @@
 		<ul id="userList"></ul>
 	</div>
 	
-	<form id="messageForm" class="w3-panel w3-teal chat-form" style="margin-bottom: 0px!important;" autocomplete="off">
+	<form id="messageForm" class="w3-panel w3-grey chat-form" style="margin-bottom: 0px!important;" autocomplete="off">
 		<div class="w3-row">
   			<div class="w3-col s10 m11">
     			<input type="text" id="chatInput" class="chat-text" placeholder="Send your thoughts"/>
   			</div>
   			<div class="w3-col s2 m1">
-    			<button type="submit" class="w3-button w3-indigo chat-button">
+    			<button type="submit" class="w3-button w3-brown chat-button">
 					<span class="fa fa-arrow-right" aria-hidden="true"></span>
     			</button>
   			</div>
