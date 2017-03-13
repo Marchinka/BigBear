@@ -52,11 +52,11 @@
 		<ul id="userList"></ul>
 	</div>
 	
-	<form id="messageForm" class="w3-panel w3-teal chat-form">
+	<form id="messageForm" class="w3-panel w3-teal chat-form" style="margin-bottom: 0px!important;">
 		<input type="text" id="chatInput" class="chat-text"/>
 		<button type="submit" class="w3-button w3-indigo chat-button">Send</button>
 	</form>
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="script.js"></script>
 </body>
