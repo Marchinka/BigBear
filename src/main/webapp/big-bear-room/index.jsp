@@ -45,7 +45,79 @@
 				<div>
 					<span class="message-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam<span>
 				</div>
-			</li>						
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-red">Utente 1</span>
+				<div>
+					<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-purple">Utente 3</span>
+				<div>
+					<span class="message-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-red">Utente 1</span>
+				<div>
+					<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-purple">Utente 3</span>
+				<div>
+					<span class="message-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam<span>
+				</div>
+			</li>	
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-red">Utente 1</span>
+				<div>
+					<span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-purple">Utente 3</span>
+				<div>
+					<span class="message-content">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur<span>
+				</div>
+			</li>
+			<li class="message-card w3-card-4">
+				<span class="user-info w3-text-green">Utente 2</span>
+				<div>
+					<span class="message-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam<span>
+				</div>
+			</li>	
 		</ul>
 	</div>
 
@@ -56,7 +128,7 @@
 	<form id="messageForm" class="w3-panel w3-teal chat-form" style="margin-bottom: 0px!important;" autocomplete="off">
 		<div class="w3-row">
   			<div class="w3-col s10 m11">
-    			<input type="text" id="chatInput" class="chat-text" placeholder=" Send your thoughts"/>
+    			<input type="text" id="chatInput" class="chat-text" placeholder="Send your thoughts"/>
   			</div>
   			<div class="w3-col s2 m1">
     			<button type="submit" class="w3-button w3-indigo chat-button">

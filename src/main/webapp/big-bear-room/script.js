@@ -18,14 +18,19 @@ var sendMessage = function ()  {
 	});
 	$("#chatInput").val("");
 	$('body').focus();
+	scrollToBottom();
 };
 
+var scrollToBottom = function () {
+	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+};
 
 var runApplication = function ()  {
 	$("#messageForm").submit(function (e) {
 		e.preventDefault();
 		sendMessage();
 	});
+	scrollToBottom();
 };
 
 
