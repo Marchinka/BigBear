@@ -22,14 +22,29 @@
 	<div>
 		<ul id="messageList" class="w3-ul w3-card-4">
 			<li class="w3-blue message-card">
-				<p>Message</p>
+				<span class="user-info">Utente 1</span>
+				<div>
+					<span class="message-content">Message<span>
+				</div>
 			</li>
 			<li class="w3-green message-card">
-				<p>Message</p>
+				<span class="user-info">Utente 2</span>
+				<div>
+					<span class="message-content">Message<span>
+				</div>
 			</li>
 			<li class="w3-red message-card">
-				<p>Message</p>
-			</li>			
+				<span class="user-info">Utente 3</span>
+				<div>
+					<span class="message-content">Message<span>
+				</div>
+			</li>
+			<li class="w3-green message-card">
+				<span class="user-info">Utente 2</span>
+				<div>
+					<span class="message-content">Message<span>
+				</div>
+			</li>						
 		</ul>
 	</div>
 
